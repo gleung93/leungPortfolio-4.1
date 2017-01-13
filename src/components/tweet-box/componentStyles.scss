@@ -1,0 +1,19 @@
+@import '../../styleThemes/buttons';
+
+.tweet-btn {
+  @include primary-btn;
+  margin-right: 10px;
+}
+
+.photo-btn {
+  @include primary-btn-icon(carretDown);
+}
+
+.appear {
+  opacity: 0.01;
+
+  &.appearActive {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+  }
+}

@@ -1,0 +1,33 @@
+@import "./colors";
+@import "./icons";
+
+@mixin primary-btn() {
+  font-size: 12px;
+  line-height: 50px;
+  border-radius: 3px;
+  height: 50px;
+  border: none;
+  padding: 0 16px;
+  color: $white;
+  background-color: rgb(143, 81, 198);
+  text-overflow: uppercase;
+}
+
+@mixin primary-btn-icon($icon) {
+  @include primary-btn();
+  position: relative;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    margin-right: 13px;
+    //position: absolute;
+    //top: 15px;
+    //left: 16px;
+    background-image: map-get($iconSource, $icon);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 12px;
+    width: 13px;
+  }
+}
